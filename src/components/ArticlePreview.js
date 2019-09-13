@@ -12,9 +12,11 @@ const StyledImage = styled(Image)`
 const ArticlePreview = ({ article }) => (
   <article
     css={css`
-      border-bottom: 1px solid #ddd;
       display: flex;
       padding: 20px;
+      margin: 5px 0;
+      background-color: #ffffff;
+      border-radius: 5px;
     `}
   >
     <Link
@@ -46,6 +48,7 @@ const ArticlePreview = ({ article }) => (
       <p
         css={css`
           margin: 0;
+          font-size: 1rem;
         `}
       >
         {article.excerpt}

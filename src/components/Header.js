@@ -4,12 +4,12 @@ import { css } from "@emotion/core"
 import styled from "@emotion/styled"
 
 const NavLink = styled(Link)`
-  color: mediumorchid;
+  color: #ffffff;
   padding: 0 10px;
-  border-right: 1px solid mediumorchid;
+  // border-right: 1px solid mediumorchid;
 
   &.active-page {
-    border-bottom: 2px solid mediumorchid;
+    border-bottom: 2px solid #ffffff;
   }
 `
 const InnerHeader = ({ children }) => (
@@ -31,7 +31,7 @@ const InnerHeader = ({ children }) => (
 const Header = ({ siteTitle }) => (
   <header
     css={css`
-      background-color: #eeeeee44;
+      // background-color: #eeeeee44;
       position: absolute;
       top: 0;
       left: 0;
