@@ -4,20 +4,21 @@ import { useStaticQuery, graphql } from "gatsby"
 import BackgroundImage from "gatsby-background-image"
 
 const ImageBackground = styled(BackgroundImage)`
-  background-image: url("/images/barcelona.jpg");
+  background-image: url("/images/houston-ray.jpg");
   background-size: cover;
   background-position: 20% center;
+  background-repeat: no-repeat;
   width: 100%;
-  height: 50vh;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
 `
 
-const Hero = () => {
+const Background = ({ children }) => {
   const { image } = useStaticQuery(graphql`
     query {
-      image: file(relativePath: { eq: "barcelona.jpg" }) {
+      image: file(relativePath: { eq: "houston-ray.jpg" }) {
         sharp: childImageSharp {
           fluid {
             ...GatsbyImageSharpFluid_withWebp
@@ -27,10 +28,10 @@ const Hero = () => {
     }
   `)
   return (
-    <ImageBackground Tag="section" fluid={image.sharp.fluid} fadeIn="soft">
-      <h1>Hero text right here</h1>
+    <ImageBackground Tag="main" fluid={image.sharp.fluid} fadeIn="soft">
+      {children}
     </ImageBackground>
   )
 }
 
-export default Hero
+export default Background
