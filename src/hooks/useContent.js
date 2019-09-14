@@ -15,7 +15,7 @@ const useContent = () => {
                 fluid(
                   maxHeight: 100
                   maxWidth: 100
-                  duotone: { highlight: "#27495A", shadow: "#A7BBC5" }
+                  duotone: { highlight: "#27495A", shadow: "#ffffff" }
                 ) {
                   ...GatsbyImageSharpFluid_withWebp
                 }
