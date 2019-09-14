@@ -1,8 +1,8 @@
 import React from "react"
-import { css } from "@emotion/core"
-import styled from "@emotion/styled"
 import { Link } from "gatsby"
 import Image from "gatsby-image"
+import { css } from "@emotion/core"
+import styled from "@emotion/styled"
 
 const StyledImage = styled(Image)`
   width: 100px;
@@ -57,9 +57,10 @@ const ArticlePreview = ({ article }) => (
         to={article.slug}
         css={css`
           margin: 0;
+          font-size: 0.9rem;
         `}
       >
-        read this post &rarr;
+        Read this post &rarr;
       </Link>
     </div>
   </article>
