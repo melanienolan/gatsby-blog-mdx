@@ -1,11 +1,10 @@
 import React from "react"
-import useSiteMetadata from "../hooks/useSiteMetadata"
-import { Global, css } from "@emotion/core"
+import { Helmet } from "react-helmet"
 import { TypographyStyle, GoogleFont } from "react-typography"
 import typography from "../utils/typography"
-import { Helmet } from "react-helmet"
+import { Global, css } from "@emotion/core"
+import useSiteMetadata from "../hooks/useSiteMetadata"
 import Background from "./Background"
-
 import Header from "./Header"
 
 const Layout = ({ children }) => {
@@ -21,14 +20,25 @@ const Layout = ({ children }) => {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
-          }
 
-          * + * {
-            // margin-top: 1.75rem;
+            > div {
+              margin-top: 0;
+            }
           }
 
           a {
+            color: #27495a;
             text-decoration: none;
+          }
+
+          h1,
+          h2,
+          h3 {
+            color: #27495a;
+            line-height: 1.5;
+          }
+          p {
+            color: #766969;
           }
         `}
       />
@@ -37,19 +47,11 @@ const Layout = ({ children }) => {
         <GoogleFont typography={typography} />
       </Helmet>
 
-      {/* <main
-        css={css`
-          margin: 0 auto 0 auto;
-          width: 900px;
-          max-width: 90vw;
-        `}
-      > */}
       <Background>
         <Header siteTitle={siteMetadata.title}></Header>
         {children}
         <footer>footer</footer>
       </Background>
-      {/* </main> */}
     </>
   )
 }

@@ -1,7 +1,7 @@
 import React from "react"
-import styled from "@emotion/styled"
 import { useStaticQuery, graphql } from "gatsby"
 import BackgroundImage from "gatsby-background-image"
+import styled from "@emotion/styled"
 
 const ImageBackground = styled(BackgroundImage)`
   background-image: url("/images/houston-ray.jpg");
@@ -13,6 +13,7 @@ const ImageBackground = styled(BackgroundImage)`
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  position: relative;
 `
 
 const Background = ({ children }) => {

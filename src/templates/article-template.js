@@ -1,8 +1,8 @@
 import React from "react"
-import { graphql } from "gatsby"
-import Layout from "../components/Layout"
-import { Link } from "gatsby"
+import { Link, graphql } from "gatsby"
 import { MDXRenderer } from "gatsby-plugin-mdx"
+import Layout from "../components/Layout"
+import Section from "../components/Section"
 
 export const query = graphql`
   query($slug: String!) {
@@ -15,13 +15,13 @@ export const query = graphql`
     }
   }
 `
-
 const ArticleTemplate = ({ data: { mdx: article } }) => (
   <Layout>
-    <h1>{article.frontmatter.title}</h1>
-    <MDXRenderer>{article.body}</MDXRenderer>
-    <p></p>
-    <Link to="/">&larr; Back to Home &hearts;</Link>
+    <Section>
+      <h1>{article.frontmatter.title}</h1>
+      <MDXRenderer>{article.body}</MDXRenderer>
+      <Link to="/">&larr; Back to Home &hearts;</Link>
+    </Section>
   </Layout>
 )
 
