@@ -3,17 +3,7 @@ import Typography from "typography"
 const typography = new Typography({
   baseFontSize: "16px",
   baseLineHeight: 1.4,
-  headerFontFamily: [
-    // "Avenir Next",
-    // "Helvetica Neue",
-    // "Segoe UI",
-    // "Helvetica",
-    // "Arial",
-    "Open Sans",
-    "sans-serif",
-    // "Amatic SC",
-    // "cursive",
-  ],
+  headerFontFamily: ["Open Sans", "sans-serif"],
   bodyFontFamily: ["Open Sans", "sans-serif"],
 })
 
