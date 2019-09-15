@@ -8,18 +8,13 @@ const IndexPage = () => {
   const content = useContent()
 
   return (
-    <>
-      <Layout>
-        <Section page="index">
-          {content.map(article => (
-            <ArticlePreview
-              key={article.slug}
-              article={article}
-            ></ArticlePreview>
-          ))}
-        </Section>
-      </Layout>
-    </>
+    <Layout>
+      <Section page="index">
+        {content.map(article => (
+          <ArticlePreview key={article.slug} article={article}></ArticlePreview>
+        ))}
+      </Section>
+    </Layout>
   )
 }
 

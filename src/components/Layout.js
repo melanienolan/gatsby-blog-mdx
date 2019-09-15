@@ -8,7 +8,7 @@ import Background from "./Background"
 import Header from "./Header"
 
 const Layout = ({ children }) => {
-  const siteMetadata = useSiteMetadata()
+  const { title, description } = useSiteMetadata()
 
   return (
     <>
@@ -43,12 +43,16 @@ const Layout = ({ children }) => {
         `}
       />
       <Helmet>
+        <html lang="en" />
+        <meta charSet="utf-8" />
+        <meta name="description" content={description} />
+        <title>{title}</title>
         <TypographyStyle typography={typography} />
         <GoogleFont typography={typography} />
       </Helmet>
 
       <Background>
-        <Header siteTitle={siteMetadata.title}></Header>
+        <Header siteTitle={title}></Header>
         {children}
         <footer>footer</footer>
       </Background>
