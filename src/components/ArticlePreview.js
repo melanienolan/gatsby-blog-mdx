@@ -20,7 +20,7 @@ const ArticlePreview = ({ article }) => (
     `}
   >
     <Link
-      to={article.slug}
+      to={`/${article.slug}`}
       css={css`
         display: block;
         width: 100px;
@@ -43,7 +43,7 @@ const ArticlePreview = ({ article }) => (
           margin: 0;
         `}
       >
-        <Link to={article.slug}>{article.title}</Link>
+        <Link to={`/${article.slug}`}>{article.title}</Link>
       </h3>
       <p
         css={css`
@@ -54,7 +54,7 @@ const ArticlePreview = ({ article }) => (
         {article.excerpt}
       </p>
       <Link
-        to={article.slug}
+        to={`/${article.slug}`}
         css={css`
           margin: 0;
           font-size: 0.9rem;
