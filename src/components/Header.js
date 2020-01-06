@@ -2,6 +2,7 @@ import React from "react"
 import { Link } from "gatsby"
 import { css } from "@emotion/core"
 import styled from "@emotion/styled"
+import LeafIcon from "./LeafIcon"
 
 const NavLink = styled(Link)`
   color: #ffffff;
@@ -39,9 +40,7 @@ const Header = ({ siteTitle }) => (
     `}
   >
     <InnerHeader>
-      <NavLink to="/">
-        <h1>&hearts;</h1>
-      </NavLink>
+      <LeafIcon color="#ffffff" />
       <nav>
         <NavLink to="/about/" activeClassName="active-page">
           About
