@@ -40,7 +40,7 @@ const Header = ({ siteTitle }) => (
     `}
   >
     <InnerHeader>
-      <LeafIcon color="#ffffff" />
+      <LeafIcon />
       <nav>
         <NavLink to="/about/" activeClassName="active-page">
           About

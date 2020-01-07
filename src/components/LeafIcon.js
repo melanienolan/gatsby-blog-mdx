@@ -2,7 +2,7 @@ import React from "react"
 import { css } from "@emotion/core"
 import { Link } from "gatsby"
 
-const LeafIcon = ({ color }) => {
+const LeafIcon = ({ color = "#ffffff" }) => {
   return (
     <Link
       css={css`
