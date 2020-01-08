@@ -45,9 +45,11 @@ const Header = ({ siteTitle }) => (
         <NavLink to="/about/" activeClassName="active-page">
           About
         </NavLink>
+        |
         <NavLink to="/articles/" activeClassName="active-page">
           Articles
         </NavLink>
+        |
         <NavLink to="/contact/" activeClassName="active-page">
           Contact
         </NavLink>
