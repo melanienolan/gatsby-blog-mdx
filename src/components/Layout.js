@@ -1,7 +1,5 @@
 import React from "react"
 import { Helmet } from "react-helmet"
-// import { TypographyStyle, GoogleFont } from "react-typography"
-// import typography from "../utils/typography"
 import { Global, css } from "@emotion/core"
 import useSiteMetadata from "../hooks/useSiteMetadata"
 import Background from "./Background"
