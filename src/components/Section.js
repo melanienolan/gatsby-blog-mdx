@@ -1,7 +1,7 @@
 import React from "react"
 import { css } from "@emotion/core"
 
-const Section = ({ children }) => (
+const Section = ({ children, page = null }) => (
   <section
     css={css`
       width: 900px;
@@ -13,6 +13,13 @@ const Section = ({ children }) => (
       background-color: transparent;
     `}
   >
+    <h1
+      css={css`
+        color: #ffffff;
+      `}
+    >
+      {page}
+    </h1>
     {children}
   </section>
 )

@@ -5,7 +5,7 @@ import Section from "../components/Section"
 const IndexPage = () => {
   return (
     <Layout>
-      <Section page="index">This is the index page</Section>
+      <Section></Section>
     </Layout>
   )
 }

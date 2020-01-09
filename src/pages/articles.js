@@ -1,6 +1,5 @@
 import React from "react"
 import { Link } from "gatsby"
-import { css } from "@emotion/core"
 import Layout from "../components/Layout"
 import Section from "../components/Section"
 import ArticlePreview from "../components/ArticlePreview"
@@ -12,13 +11,6 @@ const ArticlesPage = () => {
   return (
     <Layout>
       <Section page="Articles">
-        <h1
-          css={css`
-            color: #ffffff;
-          `}
-        >
-          Articles
-        </h1>
         {content.map(article => (
           <ArticlePreview key={article.slug} article={article}></ArticlePreview>
         ))}
