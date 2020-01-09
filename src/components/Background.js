@@ -29,7 +29,7 @@ const Background = ({ children }) => {
     }
   `)
   return (
-    <ImageBackground Tag="main" fluid={image.sharp.fluid} fadeIn="soft">
+    <ImageBackground Tag="div" fluid={image.sharp.fluid} fadeIn="soft">
       {children}
     </ImageBackground>
   )
