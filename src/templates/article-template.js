@@ -2,7 +2,8 @@ import React from "react"
 import { Link, graphql } from "gatsby"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import Layout from "../components/Layout"
-import Section from "../components/Section"
+import Main from "../components/Main"
+import Article from "../components/Article"
 
 export const query = graphql`
   query($slug: String!) {
@@ -17,11 +18,13 @@ export const query = graphql`
 `
 const ArticleTemplate = ({ data: { mdx: article } }) => (
   <Layout>
-    <Section>
-      <h1>{article.frontmatter.title}</h1>
-      <MDXRenderer>{article.body}</MDXRenderer>
+    <Main>
+      <Article>
+        <h1>{article.frontmatter.title}</h1>
+        <MDXRenderer>{article.body}</MDXRenderer>
+      </Article>
       <Link to="/">&larr; Back to Home &hearts;</Link>
-    </Section>
+    </Main>
   </Layout>
 )
 
