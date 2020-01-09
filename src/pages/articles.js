@@ -10,7 +10,7 @@ const ArticlesPage = () => {
 
   return (
     <Layout>
-      <Main page="Articles">
+      <Main pageTitle="Articles">
         {content.map(article => (
           <ArticlePreview key={article.slug} article={article}></ArticlePreview>
         ))}

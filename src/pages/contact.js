@@ -5,7 +5,7 @@ import Main from "../components/Main"
 
 const Contact = () => (
   <Layout>
-    <Main page="Contact"></Main>
+    <Main pageTitle="Contact"></Main>
     <Link to="/">
       Go back to the homepage{" "}
       <span role="img" aria-label="sweet">

@@ -1,7 +1,7 @@
 import React from "react"
 import { css } from "@emotion/core"
 
-const Main = ({ children, page = null }) => (
+const Main = ({ children, pageTitle = null }) => (
   <main
     css={css`
       width: 900px;
@@ -18,7 +18,7 @@ const Main = ({ children, page = null }) => (
         color: #ffffff;
       `}
     >
-      {page}
+      {pageTitle}
     </h1>
     {children}
   </main>
