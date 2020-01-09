@@ -1,11 +1,11 @@
 import React from "react"
 import Layout from "../components/Layout"
-import Section from "../components/Section"
+import Main from "../components/Main"
 
 const IndexPage = () => {
   return (
     <Layout>
-      <Section></Section>
+      <Main></Main>
     </Layout>
   )
 }

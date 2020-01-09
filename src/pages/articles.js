@@ -1,7 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
 import Layout from "../components/Layout"
-import Section from "../components/Section"
+import Main from "../components/Main"
 import ArticlePreview from "../components/ArticlePreview"
 import useContent from "../hooks/useContent"
 
@@ -10,11 +10,11 @@ const ArticlesPage = () => {
 
   return (
     <Layout>
-      <Section page="Articles">
+      <Main page="Articles">
         {content.map(article => (
           <ArticlePreview key={article.slug} article={article}></ArticlePreview>
         ))}
-      </Section>
+      </Main>
       <Link to="/">
         Go back to the homepage{" "}
         <span role="img" aria-label="sweet">

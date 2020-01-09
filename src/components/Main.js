@@ -1,8 +1,8 @@
 import React from "react"
 import { css } from "@emotion/core"
 
-const Section = ({ children, page = null }) => (
-  <section
+const Main = ({ children, page = null }) => (
+  <main
     css={css`
       width: 900px;
       max-width: 90vw;
@@ -21,7 +21,7 @@ const Section = ({ children, page = null }) => (
       {page}
     </h1>
     {children}
-  </section>
+  </main>
 )
 
-export default Section
+export default Main
