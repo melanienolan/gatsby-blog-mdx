@@ -4,6 +4,7 @@ import { Global, css } from "@emotion/core"
 import useSiteMetadata from "../hooks/useSiteMetadata"
 import Background from "./Background"
 import Header from "./Header"
+import Footer from "./Footer"
 
 const Layout = ({ children }) => {
   const { title, description } = useSiteMetadata()
@@ -55,7 +56,7 @@ const Layout = ({ children }) => {
       <Background>
         <Header siteTitle={title}></Header>
         {children}
-        <footer>footer</footer>
+        <Footer />
       </Background>
     </>
   )
