@@ -1,5 +1,6 @@
 import React from "react"
 import { css } from "@emotion/core"
+import { Link } from "gatsby"
 
 const Main = ({ children, pageTitle = null }) => (
   <main
@@ -21,6 +22,14 @@ const Main = ({ children, pageTitle = null }) => (
       {pageTitle}
     </h1>
     {children}
+    <Link
+      css={css`
+        color: #ffffff;
+      `}
+      to="/"
+    >
+      &larr; Go back homepage{" "}
+    </Link>
   </main>
 )
 
