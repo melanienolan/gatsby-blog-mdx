@@ -7,12 +7,6 @@ import Main from "../components/Main"
 const About = () => (
   <Layout>
     <Main pageTitle="About"></Main>
-    <Link to="/">
-      Go back to the homepage{" "}
-      <span role="img" aria-label="sweet">
-        🍬
-      </span>{" "}
-    </Link>
   </Layout>
 )
 
