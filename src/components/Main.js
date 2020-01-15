@@ -1,8 +1,7 @@
 import React from "react"
 import { css } from "@emotion/core"
-import { Link } from "gatsby"
 
-const Main = ({ children, pageTitle = null }) => (
+const Main = ({ children }) => (
   <main
     css={css`
       width: 900px;
@@ -14,22 +13,7 @@ const Main = ({ children, pageTitle = null }) => (
       background-color: transparent;
     `}
   >
-    <h1
-      css={css`
-        color: #ffffff;
-      `}
-    >
-      {pageTitle}
-    </h1>
     {children}
-    <Link
-      css={css`
-        color: #ffffff;
-      `}
-      to="/"
-    >
-      &larr; Go back homepage{" "}
-    </Link>
   </main>
 )
 
