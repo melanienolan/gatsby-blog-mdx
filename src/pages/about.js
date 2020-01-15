@@ -4,7 +4,7 @@ import Main from "../components/Main"
 import PageTitle from "../components/PageTitle"
 import LinkToHome from "../components/LinkToHome"
 
-const About = () => (
+const AboutPage = () => (
   <Layout>
     <Main>
       <PageTitle>About</PageTitle>
@@ -13,4 +13,4 @@ const About = () => (
   </Layout>
 )
 
-export default About
+export default AboutPage
