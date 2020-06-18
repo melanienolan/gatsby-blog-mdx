@@ -5,16 +5,16 @@ const Footer = () => (
   <footer
     css={css`
       display: flex;
-      justify-content: flex-end;
+      justify-content: center;
       align-items: center;
-      width: 900px;
-      max-width: 90vw;
-      height: 50px;
-      margin: 0 auto;
       color: #ffffff;
+      width: 900px;
+      height: 50px;
+      max-width: 90vw;
+      margin: 0 auto;
     `}
   >
-    &copy; Mel Nolan
+    &copy; Melanie Nolan
   </footer>
 )
 
