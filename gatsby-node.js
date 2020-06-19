@@ -11,13 +11,13 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     }
   `)
   if (result.errors) {
-    reporter.panic("failed to create pages", result.errors)
+    reporter.panic("failed to create pages", JSON.stringify(result.errors))
   }
   const articles = result.data.allMdx.nodes
 
   articles.forEach(article => {
     actions.createPage({
-      path: article.frontmatter.slug,
+      path: `/articles/${article.frontmatter.slug}/`,
       component: require.resolve("./src/templates/article-template.js"),
       context: {
         slug: article.frontmatter.slug,
