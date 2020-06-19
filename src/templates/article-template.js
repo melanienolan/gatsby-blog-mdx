@@ -1,9 +1,10 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
+import { css } from "@emotion/core"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import Layout from "../components/Layout"
 import Main from "../components/Main"
-import Article from "../components/Article"
+import PageTitle from "../components/PageTitle"
 
 export const query = graphql`
   query($slug: String!) {
@@ -16,16 +17,24 @@ export const query = graphql`
     }
   }
 `
-const ArticleTemplate = ({ data: { mdx: article } }) => (
-  <Layout>
-    <Main>
-      <Article>
-        <h1>{article.frontmatter.title}</h1>
-        <MDXRenderer>{article.body}</MDXRenderer>
-      </Article>
-      <Link to="/">&larr; Back to Home &hearts;</Link>
-    </Main>
-  </Layout>
-)
+const ArticleTemplate = ({ data: { mdx: article } }) => {
+  return (
+    <Layout>
+      <Main>
+        <article
+          css={css`
+            > p {
+              margin-bottom: 20px;
+            }
+          `}
+        >
+          <PageTitle>{article.frontmatter.title}</PageTitle>
+          <MDXRenderer>{article.body}</MDXRenderer>
+          <Link to="/articles">&larr; Back to Articles</Link>
+        </article>
+      </Main>
+    </Layout>
+  )
+}
 
 export default ArticleTemplate

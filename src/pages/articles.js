@@ -3,23 +3,23 @@ import Layout from "../components/Layout"
 import Main from "../components/Main"
 import ArticlePreview from "../components/ArticlePreview"
 import PageTitle from "../components/PageTitle"
-import LinkToHome from "../components/LinkToHome"
 import useContent from "../hooks/useContent"
 
-const ArticlesPage = () => {
+export default () => {
   const content = useContent()
 
   return (
     <Layout>
       <Main>
         <PageTitle>Articles</PageTitle>
-        {content.map(article => (
-          <ArticlePreview key={article.slug} article={article}></ArticlePreview>
-        ))}
-        <LinkToHome />
+        <ul>
+          {content.map(article => (
+            <li key={article.slug}>
+              <ArticlePreview article={article}></ArticlePreview>
+            </li>
+          ))}
+        </ul>
       </Main>
     </Layout>
   )
 }
-
-export default ArticlesPage

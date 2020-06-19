@@ -7,6 +7,11 @@ import LeafIcon from "./LeafIcon"
 const NavLink = styled(Link)`
   color: #ffffff;
   padding: 0 10px;
+  font-weight: bold;
+
+  &:hover {
+    border-bottom: 2px solid #ffffff;
+  }
 
   &.active-page {
     border-bottom: 2px solid #ffffff;
@@ -22,7 +27,6 @@ const InnerHeader = ({ children }) => (
       display: flex;
       align-items: center;
       justify-content: space-between;
-      font-weight: bold;
     `}
   >
     {children}
@@ -31,16 +35,13 @@ const InnerHeader = ({ children }) => (
 const Header = ({ siteTitle }) => (
   <header
     css={css`
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      width: 100%;
-      z-index: 1000;
+      background-color: #27495a;
     `}
   >
     <InnerHeader>
-      <LeafIcon />
+      <Link to="/">
+        <LeafIcon />
+      </Link>
       <nav>
         <NavLink to="/about/" activeClassName="active-page">
           About

@@ -1,69 +1,51 @@
 import React from "react"
 import { Link } from "gatsby"
-import Image from "gatsby-image"
+import Img from "gatsby-image"
 import { css } from "@emotion/core"
-import styled from "@emotion/styled"
-
-const StyledImage = styled(Image)`
-  width: 100px;
-  height: 100px;
-`
 
 const ArticlePreview = ({ article }) => (
-  <article
-    css={css`
-      display: flex;
-      padding: 20px;
-      margin: 5px 0;
-      background-color: #ffffff;
-      border-radius: 5px;
-    `}
-  >
-    <Link
-      to={`/${article.slug}`}
-      css={css`
-        display: block;
-        width: 100px;
-        margin: 0;
-      `}
-    >
-      <StyledImage fluid={article.image} alt={article.title} />
-    </Link>
-    <div
+  <Link to={`/articles/${article.slug}`}>
+    <article
       css={css`
         display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: center;
-        margin-left: 10px;
+        padding: 20px 0;
+        margin: 5px 0;
       `}
     >
-      <h3
+      <div
         css={css`
-          margin: 0;
+          width: 100px;
+          min-width: 100px;
+          height: 100px;
+          border-radius: 5px;
+          overflow: hidden;
         `}
       >
-        <Link to={`/${article.slug}`}>{article.title}</Link>
-      </h3>
-      <p
+        <Img fluid={article.image} alt={article.title} />
+      </div>
+      <div
         css={css`
-          margin: 0;
-          font-size: 1rem;
+          margin-left: 20px;
         `}
       >
-        {article.excerpt}
-      </p>
-      <Link
-        to={`/${article.slug}`}
-        css={css`
-          margin: 0;
-          font-size: 0.9rem;
-        `}
-      >
-        Read this post &rarr;
-      </Link>
-    </div>
-  </article>
+        <h3
+          css={css`
+            margin-bottom: 8px;
+          `}
+        >
+          {article.title}
+        </h3>
+        <p
+          css={css`
+            margin: 0;
+            font-size: 0.9rem;
+          `}
+        >
+          {article.excerpt}
+        </p>
+      </div>
+    </article>
+  </Link>
 )
 
 export default ArticlePreview

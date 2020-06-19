@@ -4,17 +4,21 @@ import { css } from "@emotion/core"
 const Footer = () => (
   <footer
     css={css`
+      height: 50px;
       display: flex;
       justify-content: center;
       align-items: center;
-      color: #ffffff;
-      width: 900px;
-      height: 50px;
-      max-width: 90vw;
-      margin: 0 auto;
+      text-align: center;
     `}
   >
-    &copy; Melanie Nolan
+    <p
+      css={css`
+        font-size: 0.6rem;
+        color: #a0aec0;
+      `}
+    >
+      &copy; Melanie Nolan
+    </p>
   </footer>
 )
 

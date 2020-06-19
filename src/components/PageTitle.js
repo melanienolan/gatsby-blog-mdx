@@ -2,13 +2,14 @@ import React from "react"
 import { css } from "@emotion/core"
 
 const PageTitle = ({ children }) => (
-  <h1
+  <h2
     css={css`
-      color: #ffffff;
+      border-bottom: 2px solid #27495a;
+      margin: 60px 0;
     `}
   >
     {children}
-  </h1>
+  </h2>
 )
 
 export default PageTitle

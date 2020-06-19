@@ -2,7 +2,6 @@ import React from "react"
 import { Helmet } from "react-helmet"
 import { Global, css } from "@emotion/core"
 import useSiteMetadata from "../hooks/useSiteMetadata"
-import Background from "./Background"
 import Header from "./Header"
 import Footer from "./Footer"
 
@@ -10,7 +9,13 @@ const Layout = ({ children }) => {
   const { title, description } = useSiteMetadata()
 
   return (
-    <>
+    <div
+      css={css`
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+      `}
+    >
       <Helmet>
         <html lang="en" />
         <meta charSet="utf-8" />
@@ -50,15 +55,16 @@ const Layout = ({ children }) => {
           p {
             color: #766969;
           }
+          li {
+            list-style: none;
+          }
         `}
       />
 
-      <Background>
-        <Header siteTitle={title}></Header>
-        {children}
-        <Footer />
-      </Background>
-    </>
+      <Header siteTitle={title}></Header>
+      {children}
+      <Footer />
+    </div>
   )
 }
 
