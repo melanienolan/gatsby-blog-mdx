@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "gatsby-blog-mdx",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "An example of a Gatsby blog with MDX",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Melanie Nolan <melly.nolan@gmail.com>",
   "dependencies": {
     "@emotion/core": "^10.0.17",
     "@emotion/styled": "^10.0.17",
@@ -42,9 +42,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
-  },
-  "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/melanienolan/gatsby-blog-mdx"
   }
 }

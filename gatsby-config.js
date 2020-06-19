@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: "Gatsby Blog MDX",
-    description: "Here's an example of a blog with MDX",
+    description: "An example of a Gatsby blog with MDX",
     author: "@melanienolan",
   },
   plugins: [
